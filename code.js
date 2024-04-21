@@ -6,7 +6,6 @@ function permutationSort(arr) {
     function permutation(arr, first) {
         for (first; first < arr.length; first++) {
             for (var second = first; second < arr.length; second++) {
-                console.log(arr);
                 iterations++;
                 [arr[first], arr[second]] = [arr[second], arr[first]];
                 permutation(arr, first + 1);
@@ -29,5 +28,3 @@ function check(arr){
     }
     return true;
 }
-
-console.log(permutationSort([2, 0, 1]));
