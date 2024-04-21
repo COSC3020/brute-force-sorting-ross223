@@ -4,16 +4,14 @@ function permutationSort(arr) {
         return iterations;
     }
     function permutation(arr, first) {
-        for (first; first < arr.length; first++) {
-            for (var second = first; second < arr.length; second++) {
-                iterations++;
-                [arr[first], arr[second]] = [arr[second], arr[first]];
-                permutation(arr, first + 1);
-                if (check(arr) == true) {
-                    return iterations;
-                }
-                [arr[second], arr[first]] = [arr[first], arr[second]];
+        for (var second = first; second < arr.length; second++) {
+            iterations++;
+            [arr[first], arr[second]] = [arr[second], arr[first]];
+            permutation(arr, first + 1);
+            if (check(arr) == true) {
+                return iterations;
             }
+            [arr[second], arr[first]] = [arr[first], arr[second]];
         }
     }
     permutation(arr, 0);
