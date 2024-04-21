@@ -27,7 +27,7 @@ is implemented with some for loops we can analyze the complexity using loop logi
 The first loop will run n times where n is the length of the array, as seen in the loop
 conditions. Then it will call the permutation function which will be called using a starting
 index that is one greater. This results in something reminicent of n(n-1)(n-2)... which is
-n!. Then a third loop is called inside the for loop which runs over the whole array to see
+n!. Then a second loop is called inside the for loop which runs over the whole array to see
 if it is sorted so it has a runtime of n. So the total runtime can be calculated by 
 multiplying these together resulting in the runtime complexity is $\Theta (n*n!)$.
 
