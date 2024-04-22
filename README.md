@@ -31,14 +31,15 @@ n!. Then a second loop is called inside the for loop which runs over the whole a
 if it is sorted so it has a runtime of n. So the total runtime can be calculated by 
 multiplying these together resulting in the runtime complexity is $\Theta (n*n!)$.
 
-The best case input would be an array with zero elements as there is a condition at the 
-beginning of the function checking for this specifically. This would result in a 
-runtime of $\Theta (1)$ since there is only constant processes.
+The best case input would be an array that is already sorted as the program would only
+have to find one permutation of the array. This means that it would only have to run
+the first for loop once and the second one once as well, so the overall runtime would
+be $\Theta (n^2)$
 
 The worst case would be the program having to run through every permutation before 
 finding the correct sorted list, which would result in the runtime complexity of 
 $\Theta (n*n!)$ as described above.
 
 If permutations were generated randomly without memory there is the possiblity of
-the program never ending albiet small. So the best case would still be the array
-has zero elements, but in the worst case the program would run infinitely.
+the program never ending albiet small. So the best case would be the array gets
+sorted immediately by chance, but in the worst case the program would run infinitely.
