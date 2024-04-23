@@ -32,9 +32,8 @@ if it is sorted so it has a runtime of n. So the total runtime can be calculated
 multiplying these together resulting in the runtime complexity is $\Theta (n*n!)$.
 
 The best case input would be an array that is already sorted as the program would only
-have to find one permutation of the array. This means that it would only have to run
-the first for loop once and the second one once as well, so the overall runtime would
-be $\Theta (n^2)$
+have to check one permutation of the array. This means that it would only have to run
+the check function once, which results in a runtime of $\Theta (n)$.
 
 The worst case would be the program having to run through every permutation before 
 finding the correct sorted list, which would result in the runtime complexity of 
