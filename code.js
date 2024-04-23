@@ -6,15 +6,16 @@ function permutationSort(arr) {
     function permutation(arr, first) {
         if (check(arr) == true) {
             return iterations;
-        }
-        for (var second = first; second < arr.length; second++) {
-            iterations++;
-            [arr[first], arr[second]] = [arr[second], arr[first]];
-            permutation(arr, first + 1);
-            if (check(arr) == true) {
-                return iterations;
+        } else {
+            for (var second = first; second < arr.length; second++) {
+                iterations++;
+                [arr[first], arr[second]] = [arr[second], arr[first]];
+                permutation(arr, first + 1);
+                if (check(arr) == true) {
+                    return iterations;
+                }
+                [arr[second], arr[first]] = [arr[first], arr[second]];
             }
-            [arr[second], arr[first]] = [arr[first], arr[second]];
         }
     }
     permutation(arr, 0);
