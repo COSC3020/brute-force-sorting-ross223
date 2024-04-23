@@ -4,6 +4,9 @@ function permutationSort(arr) {
         return iterations;
     }
     function permutation(arr, first) {
+        if (check(arr) == true) {
+            return iterations;
+        }
         for (var second = first; second < arr.length; second++) {
             iterations++;
             [arr[first], arr[second]] = [arr[second], arr[first]];
