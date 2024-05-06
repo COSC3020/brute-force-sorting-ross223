@@ -42,3 +42,7 @@ $\Theta (n*n!)$ as described above.
 If permutations were generated randomly without memory there is the possiblity of
 the program never ending albiet small. So the best case would be the array gets
 sorted immediately by chance, but in the worst case the program would run infinitely.
+
+## Sources
+
+Zach Renz explained a lot of this exercise to me and was overall really helpful
